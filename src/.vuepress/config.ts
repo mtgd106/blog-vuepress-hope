@@ -2,11 +2,12 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 // import { hopeTheme } from "vuepress-theme-hope";
 export default defineUserConfig({
-  base: "/",
+
+    base: "/",
 
   lang: "zh-CN",
   title: "北斗星司",
-  description: "我的学习笔记",
+  description: "Java学习笔记",
 
    theme,
   // theme: hopeTheme({

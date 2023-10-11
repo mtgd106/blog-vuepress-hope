@@ -17,7 +17,7 @@ export default sidebar({
             //link: "/Java基础/jichu",
             collapsable: true,
             children: [
-                {text: "基础面试", icon: "pen-to-square", link: "diyi"},
+                {text: "基础面试", icon: "pen-to-square", path: "diyi"},
             ]
         },
         {
