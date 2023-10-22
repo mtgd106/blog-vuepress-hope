@@ -4,11 +4,30 @@ export default sidebar({
     "/": [
         "",
         {
-            text: "java基础",
+            text: "Java基础",
             icon: "book",
             prefix: "posts/java",
-            collapsable: true,
-            children: "structure",
+            collapsible: true,
+           // children: "structure",
+            children: [
+                {
+                    text: "基础面试1",
+                    icon: "book",
+                    collapsible: true,
+                    children: [
+                        {text: "基础面试2", icon: "pen-to-square", path: "posts/JVM/diyi.md"},
+                    ]
+                },
+                {
+                    text: "基础面试2",
+                    icon: "pen-to-square",
+                    children: [
+                        {text: "基础面试2", icon: "pen-to-square", path: "posts/JVM/diyi.md"},
+
+                   ]
+                }
+
+            ]
         },
         {
             text: "JVM",
@@ -22,11 +41,40 @@ export default sidebar({
         },
         {
             text: "数据库",
-            icon: "book",
-            prefix: "posts/database",
-            //link: "/posts/JVM",
+            icon: "database",
             collapsible: true,
-            children: "structure",
+            children: [
+                {
+                    text: "MySQL",
+                    icon: "book",
+                    prefix: "/posts/database/MySQL",
+                    collapsible: true,
+                    children: [
+                        {
+                            text: "数据类型和SQL语句",
+                            icon: "cat",
+                            path: "MySQL基础"
+                        }
+                    ]
+                },
+                {
+                    text: "Redis",
+                    icon: "book",
+                    prefix: "/posts/database/Redis",
+                    collapsible: true,
+                    children: [
+                        {
+                            text: "Redis基础",
+                            icon: "pen-to-square",
+                            path: "MySQL基础"
+                        },
+                        {
+
+                        }
+                    ]
+                },
+                //{text: "基础面试2", icon: "pen-to-square", path: "posts/JVM/diyi.md"},
+            ],
         },
         // {
         //   text: "数据库",

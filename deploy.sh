@@ -10,9 +10,16 @@ npm run docs:build
 cd src/.vuepress/dist
 
 git init
+
 git add -A
-git commit -m 'deploy'
+
+time=$(date "+%Y.%m.%d-%H:%M:%S")
+
+git commit -m $time
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:mtgd106/mtgd106.github.io.git master
+git push  git@github.com:mtgd106/mtgd106.github.io.git master
 
+echo 按任意键继续
+
+read -n 1

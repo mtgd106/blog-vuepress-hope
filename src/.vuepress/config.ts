@@ -1,9 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
+import {blog} from "vuepress-theme-hope";
 // import { hopeTheme } from "vuepress-theme-hope";
 export default defineUserConfig({
 
-    base: "/",
+  base: '/',
 
   lang: "zh-CN",
   title: "北斗星司",
