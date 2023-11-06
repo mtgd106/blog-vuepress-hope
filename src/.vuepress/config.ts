@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import {blog} from "vuepress-theme-hope";
-// import { hopeTheme } from "vuepress-theme-hope";
+import { searchPlugin } from "@vuepress/plugin-search";
 export default defineUserConfig({
 
   base: '/',
@@ -10,28 +9,27 @@ export default defineUserConfig({
   title: "北斗星司",
   description: "Java学习笔记",
 
-   theme,
-  // theme: hopeTheme({
-  //   navbar: [
-  //     {
-  //       text: "指南",
-  //       link: "/zh/guide/README.md",
-  //       icon: "lightbulb",
-  //       // 仅在 `/zh/guide/` 激活
-  //       activeMatch: "^/zh/guide/$",
-  //     },
-  //     { text: "配置", link: "/zh/config/README.md", icon: "config" },
-  //     {
-  //       text: "常见问题",
-  //       link: "/zh/faq.md",
-  //       icon: "circle-question",
-  //       // 会在 `/zh/faq` 开头的路径激活
-  //       // 所以当你前往 `/zh/faq/xxx.html` 时也会激活
-  //       activeMatch: "^/zh/faq",
-  //     },
-  //   ],
-  // }),
+  theme,
 
-  // Enable it with pwa
-  // shouldPrefetch: false,
+  plugins: [
+    // 搜索插件
+    searchPlugin({
+      // https://vuejs.press/zh/reference/plugin/search.html#getextrafields
+      // 排除首页
+      isSearchable: (page) => page.path !== "/",
+      maxSuggestions: 10,
+      // 按下s或 / 时，搜索框会被聚焦
+      hotKeys: ["s", "/"],
+
+      // 默认情况下，该插件会将页面标题和小标题作为搜索索引。
+      // 该配置项可以帮助你添加更多的可搜索字段。
+      getExtraFields: () => [],
+      locales: {
+        "/": {
+          placeholder: "搜索",
+        },
+      },
+    }),
+  ]
+
 });

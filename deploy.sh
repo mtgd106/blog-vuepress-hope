@@ -17,8 +17,15 @@ time=$(date "+%Y.%m.%d-%H:%M:%S")
 
 git commit -m $time
 
+# 如果发布到 https://<USERNAME>.github.io
+git push -f git@github.com:mtgd106/mtgd106.github.io.git master
+
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push git@github.com:mtgd106/mtgd106.github.io.git master
+# git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+cd ../
+
+rm -rf dist
 
 echo 按任意键继续
 
