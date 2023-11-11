@@ -44,6 +44,9 @@ export const interview = arraySidebar( [
         prefix: '数据结构/',
         children: [
             "堆",
+            "布隆过滤器",
+            "比较类排序",
+            "非比较类排序",
 
         ]
     },

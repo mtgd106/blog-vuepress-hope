@@ -7,15 +7,12 @@ export const note = arraySidebar([
         prefix: 'Java/',
         collapsible: true,
         children: [
-            {
-                text: "基础语法",
-                icon: "book",
-                collapsible: true,
-                children: [
-
-                    {text: "基础面试2", icon: "pen-to-square", link: "posts/JVM/diyi.md"},
-                ]
-            },
+            "基础知识",
+            "面向对象",
+            "集合",
+            "泛型",
+            "反射",
+            "注解",
         ]
     },
 
@@ -97,6 +94,7 @@ export const note = arraySidebar([
             "概述",
             "类加载子系统",
             "运行时内存空间",
+            "对象",
                 /*
                  {text: "概述",path: "/JVM/概述"},
                  {text: "类加载子系统",path: "/JVM/类加载子系统"},
@@ -113,7 +111,7 @@ export const note = arraySidebar([
             {
                 text: 'Java线程',
                 icon: '/assets/icon/进程.svg',
-                prefix: 'thread/',
+                prefix: 'Java线程/',
                 collapsible: true,
                 children:[
                     "线程的创建和运行",
@@ -124,7 +122,7 @@ export const note = arraySidebar([
             {
                 text: '并发工具类',
                 icon: 'tool',
-                prefix: 'tools/',
+                prefix: '并发工具类/',
                 collapsible: true,
                 children:[
                     "线程池",
@@ -141,6 +139,7 @@ export const note = arraySidebar([
         children: [
             "基础命令",
             "Vim编辑器",
+            "文件处理",
             "Shell编程",
         ]
     },

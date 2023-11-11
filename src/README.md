@@ -5,7 +5,6 @@ icon: home
 title: 首页
 heroImage: /logo.svg
 heroText: 学习笔记
-heroFullScreen: true
 tagline: 与君初相识，犹如故人归
 #projects:
 #  - icon: project
